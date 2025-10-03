@@ -288,72 +288,68 @@ body {
   transition: width 2s ease-in-out;
 }
 
-/* Projects grid adjustments */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Smaller cards for better ordering */
-  gap: 10px; /* tighter gap between cards */
-  padding: 10px 0; /* reduced vertical padding */
-}
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* smaller cards */
-  gap: 10px;
-  padding: 10px 0;
-  justify-content: center; /* centers last row */
+#project {
+  text-align: center;
+  padding: 80px;
+
 }
 
+#project h2 {
+  font-size: 32px;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  position: relative;
+  display: inline-block;
+}
+
+#project h2::after {
+  content: "";
+  display: block;
+  width: 70px;      /* underline width */
+  height: 3px;
+  background: #4a90e2;
+  margin: 8px auto 0; /* center underline */
+  border-radius: 2px;
+}
 
 
-
+.project-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* makes it responsive */
+  margin-top: 20px;
+}
 
 .project-card {
   background: #70e4de;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-  padding: 12px; /* compact padding */
-  text-align: center;
-  transition: transform 0.3s;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+  padding: 20px;
+  width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.project-card a {
+  text-decoration: none;
+  color: #e93ca3;
+  font-weight: bold;
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
-}
-
-.project-card img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin-bottom: 8px; /* reduced gap below image */
-}
-
-.bar {
-  width: 100%;
-  background: #eee;
-  border-radius: 15px;
-  overflow: hidden;
-  margin-top: 4px; /* less margin above progress bar */
-}
-
-.fill {
-  height: 10px;
-  background: linear-gradient(90deg, #6a0dad, #f97316);
-  border-radius: 15px;
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
+  
 }
 
 
-.bar {
-  width: 100%;
-  background: #eee;
-  border-radius: 20px;
-  overflow: hidden;
-  margin-top: 6px;
-}
-
-.fill {
-  height: 12px;
-  background: linear-gradient(90deg, #6a0dad, #f97316);
-  border-radius: 20px;
-}
 .cert-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -731,4 +727,5 @@ body {
   text-decoration: none;
   font-size: 0.75rem;
 }
+
 
