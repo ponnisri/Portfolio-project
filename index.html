@@ -14,6 +14,7 @@
   <header>
     <nav class="navbar">
       <div class="logo">My Portfolio</div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#Education">Education</a></li>
@@ -248,7 +249,9 @@
   e.preventDefault(); // prevent real form submission
   alert("✅ Your message has been submitted successfully!");
 });
-  
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('active');
+  }
   
 
   </script>
@@ -256,6 +259,7 @@
 
   </body>
   </html>
+
 
 
 
