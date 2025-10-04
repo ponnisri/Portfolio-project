@@ -636,7 +636,7 @@ body {
 .contact-section h2 {
   font-size: 1.8rem; /* Slightly smaller */
   margin-bottom: 20px; /* Reduced spacing */
-  color: #c95e06;
+  color: #2c3e50;
 }
 
 /* Form container */
@@ -672,7 +672,7 @@ body {
 }
 
 .contact-form-container .btn.primary:hover {
- background: #4e494d;
+background: #4e494d;
 }
 
 /* Contact Info Cards */
@@ -974,6 +974,7 @@ body, .hero, .section, #project, .contact-section {
     font-size: 1rem;
   }
 }
+
 
 
 
