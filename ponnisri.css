@@ -726,6 +726,261 @@ body {
   text-decoration: none;
   font-size: 0.75rem;
 }
+/* ==========================
+   Responsive adjustments
+   ========================== */
+
+/* General container adjustments */
+body, .hero, .section, #project, .contact-section {
+  box-sizing: border-box;
+}
+
+/* ==========================
+   Navbar responsiveness
+   ========================== */
+@media (max-width: 1024px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 15px 20px;
+  }
+  .nav-links {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    margin-top: 10px;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .navbar {
+    justify-content: space-between;
+    padding: 10px 15px;
+  }
+}
+/* ------------------ Responsive Navbar ------------------ */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #222;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+}
+
+/* ==========================
+   Hero Section Responsiveness
+   ========================== */
+
+/* Large screens (default) */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 60px 8%;
+}
+
+/* Tablet (≤1024px) */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    padding: 50px 5%;
+    text-align: center;
+  }
+  .hero-content {
+    max-width: 90%;
+  }
+  .hero-image img,
+  .transformed-img {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+/* Mobile (≤768px) */
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 5%;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  .hero-image img,
+  .transformed-img {
+    width: 180px;
+    height: 180px;
+    margin-top: 20px;
+  }
+}
+
+/* Small Mobile (≤480px) */
+@media (max-width: 480px) {
+  .hero {
+    padding: 30px 5%;
+  }
+  .hero-title {
+    font-size: 1.6rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  .hero-image img,
+  .transformed-img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+
+
+
+
+/* ==========================
+   Sections responsiveness
+   ========================== */
+@media (max-width: 1024px) {
+  .section, #skills, #project, .contact-section {
+    padding: 40px 5%;
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .edu-grid, .project-container, .cert-grid, .card-container, .contact-info-cards {
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .edu-card, .project-card, .cert-card, .card {
+    width: 90%;
+  }
+}
+
+/* ==========================
+   Skills bar responsiveness
+   ========================== */
+@media (max-width: 768px) {
+  .skill-container {
+    width: 90%;
+    height: 18px;
+  }
+  .skill-bar {
+    line-height: 18px;
+  }
+}
+
+/* ==========================
+   Contact form responsiveness
+   ========================== */
+@media (max-width: 768px) {
+  .contact-form-container {
+    width: 100%;
+  }
+  .contact-form-container input,
+  .contact-form-container textarea {
+    font-size: 0.9rem;
+  }
+}
+/* ==========================
+   Contact info cards responsiveness
+   ========================== */
+@media (max-width: 1024px) {
+  .contact-info-cards {
+    justify-content: center;
+    gap: 12px;
+  }
+  .contact-info-cards .card {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-info-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .contact-info-cards .card {
+    flex: 1 1 45%;      /* two cards per row */
+    max-width: 200px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-info-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .contact-info-cards .card {
+    flex: 1 1 100%;
+    max-width: 100%;    /* full width on mobile */
+  }
+}
+
+
+/* ==========================
+   Small devices
+   ========================== */
+@media (max-width: 480px) {
+  .hero {
+    padding: 30px 5%;
+  }
+  .section, #skills, #project, .contact-section {
+    padding: 25px 5%;
+  }
+  .hero-title h1, .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  .hero-subtitle, .hero-content h2 {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+
+
+
 
 
 
